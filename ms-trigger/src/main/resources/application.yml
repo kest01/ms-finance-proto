@@ -1,0 +1,9 @@
+server:
+  port: 8080
+spring:
+  cloud:
+    stream:
+      bindings:
+        test-messages:
+          destination: tst-msg
+          group: test-group
