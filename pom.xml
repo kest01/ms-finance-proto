@@ -10,6 +10,7 @@
 
     <modules>
         <module>ms-trigger</module>
+        <module>ms-autogen</module>
     </modules>
 
 </project>
