@@ -1,0 +1,22 @@
+version: "3"
+services:
+  rabbitmq:
+    image: "rabbitmq:3-management"
+    ports:
+      - "15672:15672"
+
+  ms-trigger:
+    image: luxoft-alfabank/ms-trigger:latest
+    ports:
+      - "8080:8080"
+    environment:
+      - SPRING_RABBITMQ_HOST=rabbitmq
+
+  ms-autogen:
+    image: luxoft-alfabank/ms-autogen:latest
+    environment:
+#      - JAVA_OPTIONS=-Xmx15m
+      - SPRING_RABBITMQ_HOST=rabbitmq
+
+
+
