@@ -8,3 +8,9 @@ spring:
           destination: tst-msg
           group: test-group
           contentType: application/json
+
+logging:
+  file: ./logs/ms-autogen.log
+  level:
+    root: INFO
+    ru.alfacapital: DEBUG
