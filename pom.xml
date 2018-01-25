@@ -11,6 +11,7 @@
     <modules>
         <module>ms-trigger</module>
         <module>ms-autogen</module>
+        <module>ms-etrader</module>
     </modules>
 
 </project>

@@ -1,0 +1,8 @@
+server:
+  port: 8082
+
+logging:
+  file: ./logs/ms-etrader.log
+  level:
+    root: INFO
+    ru.alfacapital: DEBUG
