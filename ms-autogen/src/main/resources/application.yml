@@ -1,13 +1,28 @@
 server:
   port: 8081
-spring:
-  cloud:
-    stream:
-      bindings:
-        test-messages:
-          destination: tst-msg
-          group: test-group
-          contentType: application/json
+#spring:
+#  cloud:
+#    stream:
+#      bindings:
+#        test-messages:
+#          destination: tst-msg
+#          group: test-group
+#          contentType: application/json
+
+feign:
+  client:
+    config:
+      index-service:
+        connectTimeout: 5000
+        readTimeout: 5000
+        loggerLevel: full
+#        errorDecoder: com.example.SimpleErrorDecoder
+#        retryer: com.example.SimpleRetryer
+#        requestInterceptors:
+        decode404: false
+
+alfacapital.ms:
+  index-service-url: http://localhost:8082/index
 
 logging:
   file: ./logs/ms-autogen.log
